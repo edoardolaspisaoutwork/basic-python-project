@@ -10,7 +10,7 @@ def init_connection_pool():
     #     "password": os.getenv("DB_PASSWORD"),
     # }
     db_params = {
-        "host": "postgres",
+        "host": "localhost",
         "port": "5432",
         "dbname": "postgres",
         "user": "root",
