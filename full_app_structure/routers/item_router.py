@@ -6,7 +6,10 @@ from full_app_structure.response.basic_response import BasicResponse
 from full_app_structure.services.item_service import get_item_by_id
 from full_app_structure.services.products_service import fetch_all_products
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/api/items",
+    tags=["Items"]
+)
 
 @router.get("/read/{item_id}", response_model=Item)
 def read_item(item_id: int) -> BasicResponse:
